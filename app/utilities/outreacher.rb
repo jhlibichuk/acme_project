@@ -8,18 +8,19 @@ class Outreacher
     raise ArgumentError.new("expected weather to have a non-blank value") if weather.blank?
     raise ArgumentError.new("expected temperature to have a non-blank value") if temp.blank?
     temp = temp.to_f  # let's make sure this is a number, even if that number turns out to be zero
+    weather = weather.downcase
 
     # Cool and Rainy Engagements
-    return "Phone Call" if is_rainy?(weather.downcase) || temp < 55
+    return "Phone Call" if is_rainy?(weather) || temp < 55
 
     # Warm and Sunny Engagements
-    return "Email" if  is_sunny?(weather.downcase) && temp > 75
+    return "Email" if  is_sunny?(weather) && temp > 75
 
     # Pleasant Engagements
     return "Text Message" if temp > 55 && temp < 75
 
     # Warm and not sunny Engagements
-    return "Push Notification" if !(is_sunny?(weather.downcase)) && temp > 75
+    return "Push Notification" if !(is_sunny?(weather)) && temp > 75
 
     # Default -- Just In Case
     return "Email"
