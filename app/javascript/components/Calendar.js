@@ -11,6 +11,7 @@ class Calendar extends React.Component {
           weather={day.weather}
           engagement={day.engagement}
           icon={day.icon}
+          temperature={day.temperature}
         />
       );
     });

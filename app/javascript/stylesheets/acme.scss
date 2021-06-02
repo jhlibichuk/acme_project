@@ -1,12 +1,19 @@
+h1,h2,h3,h4,h5,p {
+  font-family: 'Poppins','Helvetica Neue','Helvetica','Arial',sans-serif;
+}
+
 .calendar {
-  display:flex;
   .calendar-day {
-    flex: 0 1 auto;
+    width: 170px;
+    min-height: 285px;
+    float:left;
   }
 }
 
 header {
-  margin-bottom:15px;
+  margin:15px 0;
+  h1 {color:#083659; font-weight:700;}
+  h2 { color:#cdf42a; background-color:#083659;}
 }
 
 @media only screen and (max-width: 501px) {
