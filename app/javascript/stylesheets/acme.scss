@@ -1,0 +1,18 @@
+.calendar {
+  display:flex;
+  .calendar-day {
+    flex: 0 1 auto;
+  }
+}
+
+header {
+  margin-bottom:15px;
+}
+
+@media only screen and (max-width: 501px) {
+  .calendar{
+    width:100%;
+    display:block;
+  }
+  .card { min-width:30% !important; float:left;}
+}
